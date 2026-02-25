@@ -33,7 +33,8 @@ type = git_repo
 primary_branch = master
 path = ~/mainsail-config
 origin = https://github.com/mainsail-crew/mainsail-config.git
-managed_services = klipper
+managed_services = 
+	klipper
 
 [update_manager timelapse]
 type = git_repo
@@ -71,24 +72,12 @@ path = /home/brian/mobileraker_companion
 origin = https://github.com/Clon1998/mobileraker_companion.git
 primary_branch = main
 managed_services = mobileraker
-env = /home/brian/mobileraker-env/bin/python
+virtualenv = /home/brian/mobileraker-env
 requirements = scripts/mobileraker-requirements.txt
 install_script = scripts/install.sh
 
 [spoolman]
 server = http://192.168.50.253:7912
-
-[update_manager Spoolman]
-type = zip
-channel = stable
-repo = Donkie/Spoolman
-path = /home/brian/Spoolman
-virtualenv = .venv
-requirements = requirements.txt
-persistent_files = 
-	.venv
-	.env
-managed_services = Spoolman
 
 [update_manager z_calibration]
 type = git_repo
